@@ -23,6 +23,9 @@ public class employee {
     @Column(columnDefinition = "VARCHAR(45) DEFAULT NULL", length = 45)
     String fullName;
 
+    @Column(columnDefinition = "VARCHAR(50) DEFAULT NULL", length = 50)
+    String designation;
+
     @Column(columnDefinition = "datetime DEFAULT NULL")
     LocalDateTime dateOfJoining;
 
