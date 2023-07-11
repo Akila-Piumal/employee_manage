@@ -7,8 +7,61 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
+    <main>
+        <section id="mainSec" class=" container-fluid row d-flex flex-column align-items-center justify-content-center gap-5" style="height: 100vh">
+            <div id="btnDiv" class="container-fluid d-flex justify-content-center gap-5 mt-5">
+                <button type="button" class="btn btn-outline-primary btn-lg" id="btnDesig">Designation</button>
+                <button type="button" class="btn btn-outline-primary btn-lg" id="btnAdd">View/Add Employee</button>
+            </div>
 
+            <div class="container-fluid d-flex justify-content-center">
+                <img src="assets/images/main.png"  class="img-fluid rounded" alt="image" style="height: 500px">
+            </div>
+        </section>
 
+        <section id="desigSec" class="mt-2" >
+            <header class="d-flex justify-content-center mb-4">
+                <h2>Add New Designations</h2>
+            </header>
+
+            <section id="formSec" class="mb-3">
+                <form class="row d-flex justify-content-center container-fluid " id="desigForm" >
+                    <div class="mb-4 d-flex flex-column flex-md-row col-7 gap-0 gap-md-5">
+                        <label for="txtDesigName" class="form-label col-7 col-md-5 col-lg-2">Designation Name:</label>
+                        <input type="text" class="form-control " id="txtDesigName">
+                    </div>
+                    <div class="mb-4 d-flex flex-column flex-md-row col-7 gap-0 gap-md-5">
+                        <label for="bookNameInput" class="form-label col-7 col-md-5 col-lg-2">Remark:</label>
+                        <input type="text" class="form-control" id="bookNameInput">
+                    </div>
+                </form>
+            </section>
+
+            <section id="tableSec">
+                <table class="table container" style="height: 400px; border-right: 1px solid #dee2e6; border-left: 1px solid #dee2e6">
+                    <thead class="table-dark">
+                        <tr class="text-center">
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>1</td>
+                            <td>Akila</td>
+                            <td>Akdjfkjfff</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="d-flex justify-content-end gap-5 mx-5">
+                <button type="button" form="desigForm" class="btn col-3 col-lg-1" id="btnSave" style="background: #03CD69; color: white">Save</button>
+                <button type="reset" form="desigForm" class="btn col-3 col-lg-1" id="btnReset" style="background: #FF4E4A; color: white">Reset</button>
+            </section>
+        </section>
+    </main>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
