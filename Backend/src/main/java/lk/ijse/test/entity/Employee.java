@@ -29,7 +29,9 @@ public class Employee {
     @Column(columnDefinition = "datetime DEFAULT NULL")
     LocalDateTime dateOfJoining;
 
-    @Column(columnDefinition = "boolean DEFAULT false")
     boolean isManager;
+
+//    @Column(columnDefinition = "tinyint(1) DEFAULT 0")
+//    Integer isManager;
 
 }

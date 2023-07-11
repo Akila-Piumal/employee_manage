@@ -24,6 +24,7 @@ public class DesignationController {
 
     @PostMapping
     public ResponseUtil saveDesignation(@RequestBody DesignationDTO designationDTO){
+        System.out.println(designationDTO);
         service.saveDesignation(designationDTO);
         return new ResponseUtil("200","Designation Added.",null);
     }
