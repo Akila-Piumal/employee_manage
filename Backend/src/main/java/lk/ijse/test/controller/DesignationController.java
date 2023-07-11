@@ -6,6 +6,8 @@ import lk.ijse.test.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @CrossOrigin
 @RequestMapping("/designation")
@@ -13,6 +15,12 @@ public class DesignationController {
 
     @Autowired
     DesignationService service;
+
+    @GetMapping
+    public ResponseUtil getAll(){
+        ArrayList<DesignationDTO> all = service.getAll();
+        return new ResponseUtil("200","success",all);
+    }
 
     @PostMapping
     public ResponseUtil saveDesignation(@RequestBody DesignationDTO designationDTO){
