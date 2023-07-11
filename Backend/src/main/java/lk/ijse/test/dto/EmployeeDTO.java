@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 @ToString
-public class employeeDTO {
+public class EmployeeDTO {
     private int employee;
     private String fullName;
     private String designation;
