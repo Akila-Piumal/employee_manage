@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 @ToString
 @Entity
-public class designation {
+public class Designation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int designation_id;
