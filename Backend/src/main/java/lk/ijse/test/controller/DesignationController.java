@@ -2,6 +2,7 @@ package lk.ijse.test.controller;
 
 import lk.ijse.test.dto.DesignationDTO;
 import lk.ijse.test.service.DesignationService;
+import lk.ijse.test.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +15,8 @@ public class DesignationController {
     DesignationService service;
 
     @PostMapping
-    public String saveDesignation(@RequestBody DesignationDTO designationDTO){
+    public ResponseUtil saveDesignation(@RequestBody DesignationDTO designationDTO){
         service.saveDesignation(designationDTO);
-        return "Saved";
+        return new ResponseUtil("200","Designation Added.",null);
     }
 }
