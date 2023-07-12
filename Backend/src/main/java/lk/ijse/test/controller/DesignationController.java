@@ -28,4 +28,10 @@ public class DesignationController {
         service.saveDesignation(designationDTO);
         return new ResponseUtil("200","Designation Added.",null);
     }
+
+    @DeleteMapping(params = "designation_id")
+    public ResponseUtil deleteEmployee(int designation_id){
+        service.deleteById(designation_id);
+        return new ResponseUtil("200","Deleted..!",null);
+    }
 }

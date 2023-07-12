@@ -27,4 +27,22 @@ public class EmployeeController {
         service.saveEmployee(employeeDTO);
         return new ResponseUtil("200","employee Saved.",null);
     }
+
+    @PutMapping
+    public ResponseUtil updateEmployee(@RequestBody EmployeeDTO employeeDTO){
+        service.updateEmployee(employeeDTO);
+        return new ResponseUtil("200","Updated..!",null);
+    }
+
+    @DeleteMapping(params = "employee_id")
+    public ResponseUtil deleteEmployee(int employee_id){
+        service.deleteById(employee_id);
+        return new ResponseUtil("200","Deleted..!",null);
+    }
+
+    @GetMapping(path = "/last")
+    public ResponseUtil getLastEmployee(){
+        EmployeeDTO lastEmployee = service.getLastEmployee();
+        return new ResponseUtil("200","success",lastEmployee);
+    }
 }

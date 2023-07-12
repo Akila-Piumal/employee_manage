@@ -9,4 +9,10 @@ public interface EmployeeService {
     void saveEmployee(EmployeeDTO employeeDTO);
 
     ArrayList<EmployeeDTO> getAll();
+
+    void updateEmployee(EmployeeDTO employeeDTO);
+
+    void deleteById(int employee_id);
+
+    EmployeeDTO getLastEmployee();
 }

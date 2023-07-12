@@ -2,6 +2,7 @@ package lk.ijse.test.service.impl;
 
 import lk.ijse.test.dto.DesignationDTO;
 import lk.ijse.test.entity.Designation;
+import lk.ijse.test.entity.Employee;
 import lk.ijse.test.repo.DesignationRepo;
 import lk.ijse.test.service.DesignationService;
 import org.modelmapper.ModelMapper;
@@ -33,5 +34,10 @@ public class DesignationServiceImpl implements DesignationService {
     public ArrayList<DesignationDTO> getAll() {
         List<Designation> entity = repo.findAll();
         return mapper.map(entity,new TypeToken<List<DesignationDTO>>(){}.getType());
+    }
+
+    @Override
+    public void deleteById(int designation_id) {
+        repo.deleteById(designation_id);
     }
 }

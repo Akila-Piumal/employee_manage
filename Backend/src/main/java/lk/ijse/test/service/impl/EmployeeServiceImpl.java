@@ -34,4 +34,21 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee> all = repo.findAll();
         return mapper.map(all,new TypeToken<ArrayList<EmployeeDTO>>(){}.getType());
     }
+
+    @Override
+    public void updateEmployee(EmployeeDTO employeeDTO) {
+        Employee entity = mapper.map(employeeDTO, Employee.class);
+        repo.save(entity);
+    }
+
+    @Override
+    public void deleteById(int employee_id) {
+        repo.deleteById(employee_id);
+    }
+
+    @Override
+    public EmployeeDTO getLastEmployee() {
+        Employee lastEmployee = repo.getLastEmployee();
+        return mapper.map(lastEmployee,EmployeeDTO.class);
+    }
 }
